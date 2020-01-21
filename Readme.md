@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Екатерина Пушкарева](https://up.htmlacademy.ru/htmlcss/27/user/1129585).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан](https://htmlacademy.ru/profile/viktorkan).
 
 ---
 
