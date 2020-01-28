@@ -46,8 +46,13 @@
         <li><a href="#">Моноподы для селфи</a></li>
       </ul>
       <section>
-        <h2 class="visually-hidden">Фильтр</h2>
-        <form action="#" method="post">
+        <h2>Фильтр</h2>
+        <form action="#" method="post" oninput="priceoutput.value=pricecount.value">
+          <fieldset>
+            <legend>Стоимость</legend>
+            <input type="range" multiple id="pricecount" name="pricecount" min="1" max="8000">
+            <output name="priceoutput"></output>
+          </fieldset>
           <fieldset>
             <legend>Цвет</legend>
             <input type="checkbox" name="black" id="black-field" checked>
@@ -75,6 +80,20 @@
           <button type="button">Показать</button>
         </form>          
       </section>
+
+      <section class="sorting">
+        <h2>Сортировка:</h2>
+        <ul>
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По популярности</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Вверх</a></li>
+          <li><a href="#">Вниз</a></li>
+        </ul>
+      </section>
+
       <section>
         <h2 class="visually-hidden">Список товаров</h2>
         <ul>
@@ -108,6 +127,17 @@
           </li>
         </ul>
       </section>        
+
+      <section class="pagination">
+        <h2 class="visually-hidden">Пагинация</h2>
+        <div class="paginator">
+          <a href="#">Назад</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">Вперед</a>
+        </div>
+      </section>      
     </main>
 
     <footer>
