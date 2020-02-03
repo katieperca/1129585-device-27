@@ -10,7 +10,7 @@
         <a href="#" class="header-logo">
           <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
         </a>
-        <form class="search-form" action="#" method="get">
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
           <input type="search" placeholder="Поиск по сайту">
           <button type="button">Найти</button>
         </form>
@@ -225,7 +225,35 @@
             <img src="img/map.jpg" width="560" height="222" alt="Миниатюра карты">
           </a>
           <a href="#">Напишите нам</a>
-      </section>
+			</section>
+
+			<section>
+				<h2 class="visually-hidden">Форма обратной связи</h2>
+				<form action="https://echo.htmlacademy.ru/" method="post">
+					<p>
+						<label for="feedback-name">Ваше имя:</label>
+						<input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+					</p>
+					<p>
+						<label for="">Ваш e-mail:</label>
+						<input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+					</p>
+					<p>
+						<label for="feedback-text">Текст письма:</label>
+						<textarea id="feedback-text" name="text" rows="6">В свободной форме</textarea>
+					</p>
+					<input type="button" value="Отправить">
+				</form>
+				<button type="button">Закрыть</button>
+			</section>
+
+			<section>
+				<h2 class="visually-hidden">Как до нас добраться</h2>
+				<p>
+					<img src="img/map-big.jpg" width="960" height="559" alt="Магазин по адресу ул. Строителей, 15, Москва">
+				</p>
+				<button type="button">Закрыть</button>
+			</section>
     </main>
     
     <footer>
@@ -252,6 +280,6 @@
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="img/logo-html.svg" width="27" height="35" alt="Логотип html academy">
       </a>
-    </footer>
-  </body>
+		</footer>
+	</body>
 </html>
