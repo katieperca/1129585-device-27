@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Gilroy Extrabold";
-  src:  local("Gilroy Extrabold"),
+  font-family: "Gilroy";
+  src:  local("Gilroy"),
         url("../fonts/gilroyextrabold.woff2") format("woff2"),
         url("../fonts/gilroyextrabold.woff") format("woff");
   font-weight: 800;
@@ -8,8 +8,8 @@
 }
 
 @font-face {
-  font-family: "Gilroy Light";
-  src:  local("Gilroy Light"),
+  font-family: "Gilroy";
+  src:  local("Gilroy"),
         url("../fonts/gilroylight.woff2") format("woff2"),
         url("../fonts/gilroylight.woff") format("woff");
   font-weight: 300;
@@ -26,8 +26,8 @@
 }
 
 @font-face {
-  font-family: "Open Sans Light";
-  src:  local("Open Sans Light"),
+  font-family: "Open Sans";
+  src:  local("Open Sans"),
         url("../fonts/opensanslight.woff2") format("woff2"),
         url("../fonts/opensanslight.woff") format("woff");
   font-weight: 300;
@@ -39,10 +39,10 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Open Sans Light", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
-  line-height: 30px;
   font-weight: 300;
+  line-height: 30px;
   color: #464646;
   text-align: left;
   
@@ -54,8 +54,9 @@ a {
 }
 
 .gilroy-uppercase {
-  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 24px;
   letter-spacing: 3.6px;
   text-transform: uppercase; 
@@ -77,8 +78,9 @@ a {
 
 /* кнопки */
 .button {
-  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 24px;
   color: #000000;
   text-transform: uppercase;
@@ -195,8 +197,9 @@ a {
 }
 
 .site-navigation > li > a {
-  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 24px;
   letter-spacing: 3.6px;
   text-transform: uppercase; 
@@ -229,45 +232,46 @@ a {
 
 /*О нас*/
 .index-columns h2 {
-  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
-  line-height: 48px;
   font-weight: 800;
+  line-height: 48px;
   color: #000000;
 }
 
 .about-clients-list {
-  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 16px;
-  line-height: 40px;
   font-weight: 800;
+  line-height: 40px;
   color: #000000;
 
   list-style: none;
 }
 .about a {
-  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
-  line-height: 24px;
   font-weight: 800;
+  line-height: 24px;
   text-transform: uppercase;
   color: #000000;
 }
 
 /*Контакты*/
 .contacts a {
-  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
-  line-height: 24px;
   font-weight: 800;
+  line-height: 24px;
   text-transform: uppercase;
   color: #000000;
 }
 
 /*Каталог*/
 .page-title {
-  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
+  font-weight: 800;
   line-height: 48px;
   letter-spacing: 0.47px;
   color: #000000;
@@ -300,8 +304,9 @@ a {
 }
 
 .filter-legeng {
-  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 24px;
   letter-spacing: 0.18px;
   color: #000000;
@@ -363,16 +368,18 @@ a {
 }
 
 .catalog-item-title {
-  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 24px;
   letter-spacing: 0.18px;
   color: #000000;
 }
 
 .catalog-item-price {
-  font-family: "Gilroy Light", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   font-size: 15px;
+  font-weight: 300;
   line-height: 24px;
   letter-spacing: 0.16px;
 }
