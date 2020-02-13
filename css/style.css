@@ -1,0 +1,504 @@
+@font-face {
+  font-family: "Gilroy Extrabold";
+  src:  local("Gilroy Extrabold"),
+        url("../fonts/gilroyextrabold.woff2") format("woff2"),
+        url("../fonts/gilroyextrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy Light";
+  src:  local("Gilroy Light"),
+        url("../fonts/gilroylight.woff2") format("woff2"),
+        url("../fonts/gilroylight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:  local("Open Sans"),
+        url("../fonts/opensans.woff2") format("woff2"),
+        url("../fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Light";
+  src:  local("Open Sans Light"),
+        url("../fonts/opensanslight.woff2") format("woff2"),
+        url("../fonts/opensanslight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* глобальные */
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #464646;
+  text-align: left;
+  
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gilroy-uppercase {
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase; 
+  color: #000000;
+}
+
+/*
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} 
+*/
+
+/* кнопки */
+.button {
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 3.6px;
+
+  background-color: #f0c52e;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #f0c52e;
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #f0c52e;
+}
+
+.services-button:active {
+  color: #f7e184;
+  background-color: #000000;
+}
+
+.search-button {
+  font: inherit;  
+  background-color: transparent;
+}
+
+.search-button:hover,
+.search-button:focus {
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/*хедер*/
+.main-header-logo:hover,
+.main-header-logo:focus {
+  opacity: 0.6;
+}
+
+.main-header-logo:active {
+  opacity: 0.3;
+}
+
+.search-form input {
+  font: inherit;
+  color: #000000;
+
+  background-color: transparent;
+  border: none;
+}
+
+.search-form input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input:hover::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input:hover::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input:hover::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input:hover:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-navigation {
+  font-size: 15px;
+  line-height: 30px;
+  color: #000000;
+  letter-spacing: 0.15px;
+  text-align: left;
+
+  background-color: #f7e296;
+}
+
+.user-navigation,
+.site-navigation,
+.site-navigation-dropdown {
+  list-style: none;
+}
+
+.site-navigation > li > a {
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase; 
+}
+
+.header-user-navigation a,
+.site-navigation a,
+.site-navigation-dropdown a{
+  color: #000000;
+}
+
+.header-user-navigation a:hover,
+.header-user-navigation a:focus,
+.site-navigation a:hover,
+.site-navigation a:focus,
+.site-navigation-dropdown a:hover,
+.site-navigation-dropdown a:focus{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header-user-navigation a:active,
+.site-navigation a:active,
+.site-navigation-dropdown a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.logout-link {
+  opacity: 0.3;
+}
+
+/*О нас*/
+.index-columns h2 {
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.about-clients-list {
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+  color: #000000;
+
+  list-style: none;
+}
+.about a {
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/*Контакты*/
+.contacts a {
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/*Каталог*/
+.page-title {
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+  color: #000000;
+}
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs,
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/*Фильтры и стортировка*/
+.filter-fieldset {
+  border: none;
+}
+
+.filter-legeng {
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  color: #000000;
+  text-align: left;
+}
+
+.filter-options-list {
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.14px;
+  list-style: none;
+  color: #000000;
+}
+
+.filter-input:disabled + label {
+  color: #a6a6a6;
+}
+
+.sortlist-categories,
+.sortlist-buttons {
+  list-style: none;
+}
+
+.sortlist-categories a,
+.sortlist-buttons a {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.sortlist-categories a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sortlist-categories a:hover,
+.sortlist-categories a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sortlist-categories a:active {
+  color: #000000;
+}
+
+.sortlist-buttons a {
+  color: rgba(35, 31, 32, 0.2);
+}
+
+.sortlist-buttons a:hover,
+.sortlist-buttons a:focus {
+  color: rgba(35, 31, 32, 0.4);
+}
+
+.sortlist-buttons a:active {
+  color: rgb(35, 31, 32);
+}
+
+/*Карточки товаров*/
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item-title {
+  font-family: "Gilroy Extrabold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  color: #000000;
+}
+
+.catalog-item-price {
+  font-family: "Gilroy Light", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+}
+
+.catalog-item-compare {
+  font-size: 13px;
+  line-height: 36px;
+  letter-spacing: 0.13px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.catalog-item-compare:hover,
+.catalog-item-compare:focus {
+  color: #000000;
+}
+
+.catalog-item-compare:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/*пагинация*/
+.pagination-page-number {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-page-number:hover,
+.pagination-page-number:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-page-number:active,
+.pagination-current {
+  color: #000000;
+}
+
+.pagination-previous:hover,
+.pagination-previous:focus,
+.pagination-next:hover,
+.pagination-next:focus {
+  background-color: #d9d9d9;
+}
+
+.pagination-previous:active,
+.pagination-next:active {
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: #ebebeb;
+}
+
+.pagination-next {
+  text-align: right;
+}
+
+/*Футер*/
+.main-footer-logo:hover,
+.main-footer-logo:focus {
+  opacity: 60%;
+}
+
+.main-footer-logo:active {
+  opacity: 30%;
+}
+
+.main-footer-navigation {
+  color: #ffffff;
+
+  background-color: #464646;
+}
+
+.footer-user-navigation,
+.footer-site-navigation,
+.social-list {
+  list-style: none;
+}
+
+.footer-site-navigation a,
+.social-list a {
+  color: #ffffff;
+}
+
+.footer-user-navigation a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-user-navigation a:hover,
+.footer-user-navigation a:focus {
+  color: #ffffff;
+}
+
+.footer-site-navigation a:hover,
+.footer-site-navigation a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-user-navigation a:active,
+.footer-site-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-logout-link {
+  opacity: 0.3;
+}
+
+.social-list a {
+  opacity: 0.3;
+}
+
+.social-list a:hover,
+.social-list a:focus {
+  opacity: 0.6;
+}
+
+.social-list a:active {
+  opacity: 0.1;
+}
+
+.main-logo-html:hover,
+.main-logo-html:active {
+  opacity: 0.6;
+}
+
+.main-logo-html:active {
+  opacity: 0.3;
+}
+
+/*модалки*/
+.modal {
+  display: none;
+}
