@@ -230,6 +230,81 @@ a {
   opacity: 0.3;
 }
 
+/*Слайдер*/
+.promo-slider-radiobuttons {
+  list-style: none;
+}
+
+.promo-slider {
+  list-style: none;
+}
+
+.promo-slider-item h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 56px;
+  letter-spacing: 0.47px;
+  text-align: left;
+  color: #000000;
+}
+
+.promo-slider-properties td {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 48px;
+  letter-spacing: 0.36px;
+  text-align: left;
+  color: #000000;
+}
+
+.promo-slider-properties th {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.13px;
+  text-align: left;
+  color: #464646;
+
+}
+
+/*Категории*/
+.popular-list {
+  list-style: none;
+}
+
+.popular-item h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  text-align: left;
+  color: #000000;
+}
+
+/*Сервисы*/
+.services-slider-butons,
+.services-slider {
+  list-style: none;
+}
+
+.services-slider-item h3 {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 47px;
+  font-weight: 800;
+  line-height: 48px;
+  letter-spacing: 0.47px;
+  text-align: left;
+  color: #000000;
+}
+
+/*Партнеры*/
+.partners-list {
+  list-style: none;
+}
+
 /*О нас*/
 .index-columns h2 {
   font-family: "Gilroy", Arial, sans-serif;
