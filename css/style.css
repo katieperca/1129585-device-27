@@ -94,7 +94,6 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 } 
 
-
 /* кнопки */
 .button {
   font-family: "Gilroy", Arial, sans-serif;
@@ -144,10 +143,11 @@ input[type="radio"].visually-hidden {
 /*хедер*/
 .main-header {
   margin-top:40px;
-  margin-bottom: 44px;
 }
 
 .main-navigation {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -161,10 +161,15 @@ input[type="radio"].visually-hidden {
   outline: 1px solid #8613bb;
 }
 
+.main-header-navigation {
+  padding: 50px 60px 160px;
+}
+
 .main-header-logo {
-  position: relative;
+  position: absolute;
   top: -20px;
   left: 59px;
+
   width: 163px;
   height: 35px;
 
@@ -183,10 +188,8 @@ input[type="radio"].visually-hidden {
 .search-user-navigation-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-right: 61px;
-  padding-left: 63px;
-  margin-top: 15px;
-  margin-bottom: 10px;
+  padding: 0;
+  margin: 0;
 
   outline: 1px solid #8613bb;
 }
@@ -262,10 +265,8 @@ input[type="radio"].visually-hidden {
 
 .header-site-navigation {
   display: flex;
+  margin-top: 50px;
   padding: 0;
-  padding-right: 61px;
-  padding-left: 63px;
-  margin-bottom: 43px;
 
   outline: 1px solid #8613bb;
 }
@@ -327,15 +328,50 @@ input[type="radio"].visually-hidden {
 }
 
 /*Слайдер*/
-.promo-slider-radiobuttons {
+.promo-slider {
+  margin-top: 44px;
+
+  outline: 1px solid #8613bb;
+}
+
+.promo-slider-wrapper {
+  position: relative;
+}
+
+.promo-slider-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
-.promo-slider {
-  list-style: none;
+.promo-slider-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-height: 486px;
+  padding: 0;
+  margin: 0;
+}
+
+.slide {
+  display: none;
+}
+
+.promo-slider-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 502px;
+}
+
+.promo-slider-item img {
+  order: -1;
 }
 
 .promo-slider-item h3 {
+  margin-bottom: 0;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   font-weight: 800;
@@ -364,9 +400,61 @@ input[type="radio"].visually-hidden {
   color: #464646;
 }
 
+.promo-slider-controls {
+  position: absolute;
+  bottom: 147px;
+  right: 83px;
+}
+
+.promo-slider-controls label {
+  display: inline-block;
+
+  vertical-align: top;
+
+  background-image: url("../img/slider-button-empty.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+#product-1:checked ~ .main-wrapper #slide1,
+#product-2:checked ~ .main-wrapper #slide2,
+#product-3:checked ~ .main-wrapper #slide3 {
+  display: flex;
+} 
+
+#product-1:checked ~ .main-wrapper label[for="product-1"],
+#product-2:checked ~ .main-wrapper label[for="product-2"],
+#product-3:checked ~ .main-wrapper label[for="product-3"] {
+  background-image: url("../img/slider-button.svg");
+  background-repeat: no-repeat;
+}
+
 /*Категории*/
+.popular {
+  min-height: 238px;
+  padding: 0;
+  margin: 0;
+  margin-top: 106px;
+
+  outline: 1px solid #8613bb;
+}
+
 .popular-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
   list-style: none;
+}
+
+.popular-item {
+  width: 160px;
+  margin-right: 40px;
+}
+
+.popular-item:last-child {
+  margin-right: 0;
 }
 
 .popular-item h3 {
@@ -380,12 +468,45 @@ input[type="radio"].visually-hidden {
 }
 
 /*Сервисы*/
+.services {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 84px;
+
+  background-color: #e5e5e5;
+}
+
+.services-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  outline: 1px solid #8613bb;
+}
+
 .services-slider-butons,
 .services-slider {
   list-style: none;
 }
 
+.services-slider-butons {
+  display: flex;
+  flex-direction: column;
+  width: 285px;
+  padding: 0;
+  margin: 0;
+}
+
+.services-slider {
+  width: 876px;
+  padding: 0 116px 66px;
+
+  margin: 0;
+}
+
 .services-slider-item h3 {
+  padding: 0;
+  margin-top: 0;
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
   font-weight: 800;
@@ -396,11 +517,17 @@ input[type="radio"].visually-hidden {
 }
 
 /*Партнеры*/
+.partners {
+  padding: 0;
+  margin: 0;
+  margin-top: 94px;  
+}
+
 .partners-list {
   display: flex;
   justify-content: space-between;
-  margin-top: 94px;
   padding: 0;
+  margin: 0;
 
   list-style: none;
 }
@@ -410,8 +537,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   margin-top: 93px;
-  margin-bottom: 98px;
-
+  margin-bottom: 96px;
+  
   outline: 1px solid #8613bb;
 }
 
@@ -477,15 +604,15 @@ input[type="radio"].visually-hidden {
 }
 
 /*Каталог*/
-.main-wrapper {
-  padding-left: 60px;
+.page-title-wrapper {
+  padding: 0 60px;
+  margin-top: 44px;
 
   outline: 1px solid #8613bb;
 }
 
 .page-title {
   margin: 0;
-  margin-bottom: 30px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 47px;
@@ -499,7 +626,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-bottom: 49px;
+  margin-top: 30px;
 
   list-style: none;
 
@@ -530,6 +657,7 @@ input[type="radio"].visually-hidden {
 
 /*Фильтры и сортировка*/
 .catalog-header {
+  margin-top: 49px;
   width: 100%;
   
   background-image: linear-gradient(to right, #d9d9d9 30%, #ebebeb 30%);
@@ -537,6 +665,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-header-wrapper {
   display: flex;
+
 
   outline: 1px solid #8613bb;
 }
@@ -551,13 +680,20 @@ input[type="radio"].visually-hidden {
 
 .sortlist-title {
   display: flex;
+  width: 833px;
   padding-left: 74px;
+
 }
+.sortlist-title p {
+  margin-right: 55px;
+}
+
 
 .sortlist-categories {
   display: flex;
   justify-content: space-between;
   width: 286px;
+  padding: 0;
   
   outline: 1px solid #8613bb;
 }
@@ -565,7 +701,7 @@ input[type="radio"].visually-hidden {
 .sortlist-buttons {
   display: flex;
   justify-content: flex-end;
-  width: 273px;
+  margin-left: auto;
 
   outline: 1px solid #8613bb;
 }
@@ -671,7 +807,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin-bottom: 41px;
+  margin: 0;
 
   list-style: none;
 
@@ -729,7 +865,7 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   padding: 25px 30px;
   margin: 0;
-  margin-bottom: ;
+  margin-top: 41px;
 
   list-style: none;
   background-color: #ebebeb;
@@ -771,7 +907,7 @@ input[type="radio"].visually-hidden {
 
 /*Футер*/
 .main-footer {
-  padding: 60px 0;
+  padding: 65px 0;
 
   width: 100%;
   background-color: #464646;
@@ -780,7 +916,6 @@ input[type="radio"].visually-hidden {
 .first-line-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
 
   outline: 1px solid #8613bb;
 }
@@ -854,7 +989,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 50px;
+  margin-top: 30px;
 
   outline: 1px solid #8613bb;
 }
@@ -869,6 +1004,7 @@ input[type="radio"].visually-hidden {
 
 .footer-site-navigation {
   display: flex;
+  padding: 0;
 
   outline: 1px solid #8613bb;
 }
@@ -881,6 +1017,7 @@ input[type="radio"].visually-hidden {
 .third-line-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
 
   outline: 1px solid #8613bb;
 }
