@@ -8,9 +8,13 @@
 	</head>
 	
   <body>
-		<input class="visually-hidden" type="radio" name="toggle" id="product-1" checked>
-		<input class="visually-hidden" type="radio" name="toggle" id="product-2">
-		<input class="visually-hidden" type="radio" name="toggle" id="product-3">
+		<input class="visually-hidden-input" type="radio" name="toggle" id="product-1" checked>
+		<input class="visually-hidden-input" type="radio" name="toggle" id="product-2">
+		<input class="visually-hidden-input" type="radio" name="toggle" id="product-3">
+
+		<input class="visually-hidden-input" type="radio" name="toggle2" id="service-1" checked>
+		<input class="visually-hidden-input" type="radio" name="toggle2" id="service-2">
+		<input class="visually-hidden-input" type="radio" name="toggle2" id="service-3">
 
     <header class="main-header">
 			<div class="container">
@@ -51,8 +55,9 @@
     </header>
 
     <main class="main-wrapper">
-			<div class="container">
-				<h1 class="visually-hidden">Интернет-магазин Девайс</h1>
+
+			<h1 class="visually-hidden">Интернет-магазин Девайс</h1>
+				<div class="container">
 				<section class="promo-slider"> 
 					<h2 class="visually-hidden">Промо-слайдер</h2>
 					<div class="promo-slider-wrapper">				
@@ -64,7 +69,8 @@
 						<ul class="promo-slider-list">
 							<li class="promo-slider-item slide" id="slide1">
 								<div class="promo-slider-text">
-									<h3>Делай селфи, как Бен Стиллер!</h3>
+									<h3>Делай селфи, <br>
+										как Бен Стиллер!</h3>
 									<p>
 										Самая длинная палка для селфи доступна в нашем магазине.
 										Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
@@ -87,7 +93,8 @@
 							</li>
 							<li class="promo-slider-item slide" id="slide2">
 								<div class="promo-slider-text">
-									<h3>Худеем правильно!</h3>
+									<h3>Худеем <br>
+										правильно!</h3>
 									<p>
 										Мотивирующие фитнес-браслеты помогут найти в себе силы 
 										не пропускать занятия и соблюдать диету.
@@ -118,7 +125,7 @@
 											<td>50 м</td>
 										</tr>
 										<tr>
-											<th>Длительность полета</th>
+											<th>Дальность полета</th>
 											<th>Радиус поражения</th>
 										</tr>
 									</table>
@@ -169,16 +176,28 @@
 			</div>
 
 			<section class="services">
-				<div class="container">
+				<div class="container services-slider">
 					<h2 class="visually-hidden">Сервисы</h2>
 					<div class="services-wrapper">
 						<ul class="services-slider-butons">
-							<li><button class="button services-button" type="button">Доставка</button></li>
-							<li><button class="button services-button" type="button">Гарантия</button></li>
-							<li><button class="button services-button" type="button">Кредит</button></li>		
+							<li>
+								<button class="button services-button" type="button">
+									<label for="service-1">Доставка</label>
+								</button>
+							</li>
+							<li>
+								<button class="button services-button" type="button">
+									<label fqor="service-2">Гарантия</label>
+								</button>
+							</li>
+							<li>
+								<button class="button services-button" type="button">
+									<label for="service-3">Кредит</label>
+								</button>
+							</li>		
 						</ul>
-						<ul class="services-slider">
-							<li class="services-slider-item">
+						<ul class="services-slider-list">
+							<li class="services-slider-item slide" id="slide4">
 								<h3>Доставка</h3>
 								<p>							
 									Мы с удовольствием доставим ваш товар прямо к вашему 
@@ -186,15 +205,15 @@
 									заработаем, поднимая его на ваш этаж.
 								</p>
 							</li>
-							<li class="services-slider-item">
+							<li class="services-slider-item slide" id="slide5">
 								<h3>Гарантия</h3>
 								<p>
 									Если из-за возгорания купленного у нас товара у вас сгорит 
-									дом — не переживайте, мы выдадим вам новый.
+									дом — не переживайте, мы выдадим вам новый.<br>
 									Товар, не дом, конечно же.
 								</p>
 							</li>
-							<li class="services-slider-item">
+							<li class="services-slider-item slide" id="slide6">
 								<h3>Кредит</h3>
 								<p>
 									Залезть в долговую яму стало проще! Кредитные 
