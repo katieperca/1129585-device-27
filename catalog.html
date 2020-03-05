@@ -18,7 +18,7 @@
 						<form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
 							<label class="visually-hidden" for="search">Поиск по сайту</label>
 							<input type="search" id="search" placeholder="Поиск по сайту">
-							<button class="search-button" type="button">Найти</button>
+							<button class="search-button" type="submit">Найти</button>
             </form>
              <ul class="user-navigation header-user-navigation">
               <li class="login-link-item"><a class="login-link" href="#">Валентин Петухов</a></li>            
@@ -30,22 +30,22 @@
           <nav>      
             <ul class="site-navigation header-site-navigation">
               <li class="site-navigation-catalog"><a class="catalog-link" href="catalog.html">Каталог товаров</a>
-                <ul class="site-navigation-dropdown">
+                <div class="site-navigation-dropdown">
                   <div class="site-navigation-dropdown-wrapper">
                     <div>										
-                      <li><a href="#">Виртуальная реальность</a></li>
-                      <li><a href="#">Моноподы для селфи</a></li>
-                      <li><a href="#">Экшн-камеры</a></li>								
+                      <div class="site-navigation-dropdown-item"><a href="#">Виртуальная реальность</a></div>
+                      <div class="site-navigation-dropdown-item"><a href="#">Моноподы для селфи</a></div>
+                      <div class="site-navigation-dropdown-item"><a href="#">Экшн-камеры</a></div>								
                     </div>
                     <div>								
-                      <li><a href="#">Фитнес-браслеты</a></li>
-                      <li><a href="#">Умные часы</a></li>										
+                      <div class="site-navigation-dropdown-item"><a href="#">Фитнес-браслеты</a></div>
+                      <div class="site-navigation-dropdown-item"><a href="#">Умные часы</a></div>										
                     </div>
                     <div>
-                      <li><a href="#">Квадрокоптеры</a></li>
+                      <div class="site-navigation-dropdown-item"><a href="#">Квадрокоптеры</a></div>
                     </div>
                   </div>
-                </ul>
+                </div>
               </li>             
               <li><a href="#">Доставка</a></li>
               <li><a href="#">Гарантия</a></li>
@@ -53,7 +53,7 @@
             </ul>
           </nav>
         </div>
-      </div>
+      </div><div class=""></div>
     </header>
  
     <main>
@@ -99,6 +99,7 @@
         <div class="catalog-wrapper">
           <div class="container catalog-columns">
             <section class="filters-content">
+              <h2 class="visually-hidden">Фильтр и сортировка</h2>
               <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                 <div class="filter-fieldset-wrapper">
                   <fieldset class="filter-fieldset">
@@ -208,15 +209,15 @@
                 </li>
               </ul>  
 
-              <ul class="pagination-list">
-                <li class="pagination-item"><a class="gilroy-uppercase pagination-previous" href="#">Назад</a></li>
+              <div class="pagination-list">
+                <div class="pagination-item"><a class="gilroy-uppercase pagination-previous" href="#">Назад</a></div>
                 <div class="pagination-page-number-list">
-                  <li><a class="gilroy-uppercase pagination-page-number pagination-current" href="#">1</a></li>
-                  <li><a class="gilroy-uppercase pagination-page-number" href="#">2</a></li>
-                  <li><a class="gilroy-uppercase pagination-page-number" href="#">3</a></li>
+                  <div><a class="gilroy-uppercase pagination-page-number pagination-current" href="#">1</a></div>
+                  <div><a class="gilroy-uppercase pagination-page-number" href="#">2</a></div>
+                  <div><a class="gilroy-uppercase pagination-page-number" href="#">3</a></div>
                 </div>
-                <li class="pagination-item"><a class="gilroy-uppercase pagination-next" href="#">Вперед</a></li>
-              </ul>
+                <div class="pagination-item"><a class="gilroy-uppercase pagination-next" href="#">Вперед</a></div>
+              </div>
             </section>
           </div>
         </div>
@@ -232,7 +233,7 @@
             </a>
             <ul class="user-navigation footer-user-navigation">
               <li class="login-link-item"><a class="login-link footer-login-link" href="#">Валентин Петухов</a></li>
-              <li><a class="logout-link footer-logout-link"href="#">Выйти</a></li>
+              <li><a class="logout-link footer-logout-link" href="#">Выйти</a></li>
               <li><a class="compare-link footer-compare-link" href="#">Сравнить</a></li>
               <li><a class="cart-link footer-cart-link" href="#">Корзина</a></li>
             </ul>
