@@ -15,9 +15,9 @@
             <img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
           </a>
           <div class="search-user-navigation-wrapper">
-						<form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-							<label class="visually-hidden" for="search">Поиск по сайту</label>
-							<input type="search" id="search" placeholder="Поиск по сайту">
+						<form class="search-form" action="https://echo.htmlacademy.ru/" method="get" name="search-form">
+							<label class="visually-hidden-normal" for="search">Поиск по сайту</label>
+							<input type="search" id="search" placeholder="Поиск по сайту" name="search">
 							<button class="search-button" type="submit">Найти</button>
             </form>
              <ul class="user-navigation header-user-navigation">
@@ -104,7 +104,19 @@
                 <div class="filter-fieldset-wrapper">
                   <fieldset class="filter-fieldset">
                     <legend class="filter-legeng">Стоимость</legend>
-                    <span class="filter-options-list">Здесь будет range</span>
+                    <div class="filter-options-list range-filter">
+                      <div class="range-controls">
+                        <div class="scale">
+                          <div class="bar"></div>
+                        </div>
+                        <div class="toggle toggle-min"></div>
+                        <div class="toggle toggle-max"></div>
+                      </div>
+                      <div class="price-controls">                    
+                        <label class="min-price">от <input name="min-price" type="number" value="0"></label>
+                        <label class="max-price">до <input name="max-price" type="number" value="5000"></label>
+                      </div>
+                    </div>
                   </fieldset>
                 </div>
                 <div class="filter-fieldset-wrapper">
@@ -163,7 +175,7 @@
                     <p class="catalog-item-price">500 руб.</p>
                   </div>
                   <img src="img/item-1.jpg" width="360" height="380" alt="Фото любительской селфи-палки">
-                  <div class="catalog-item-hover">
+                  <div class="catalog-item-hover" tabindex="0">
                     <a class="button" href="#">В корзину</a>
                     <a class="catalog-item-compare" href="#">Добавить к сравнению</a>
                   </div>
@@ -176,7 +188,7 @@
                     <p class="catalog-item-price">1 500 руб.</p>
                   </div>
                   <img src="img/item-2.jpg" width="360" height="380" alt="Фото профессиональной селфи-палки">
-                  <div class="catalog-item-hover">
+                  <div class="catalog-item-hover" tabindex="0">
                     <a class="button" href="#">В корзину</a>
                     <a class="catalog-item-compare" href="#">Добавить к сравнению</a>
                   </div>
@@ -189,7 +201,7 @@
                     <p class="catalog-item-price">500 руб.</p>
                   </div>
                   <img src="img/item-3.jpg" width="360" height="380" alt="Фото непотопляемой селфи-палки">
-                  <div class="catalog-item-hover">
+                  <div class="catalog-item-hover" tabindex="0">
                     <a class="button" href="#">В корзину</a>
                     <a class="catalog-item-compare" href="#">Добавить к сравнению</a>
                   </div>
@@ -202,7 +214,7 @@
                     <p class="catalog-item-price">4 900 руб.</p>
                   </div>
                   <img src="img/item-4.jpg" width="360" height="380" alt="Фото селфи-палки «Следуй за мной»">
-                  <div class="catalog-item-hover">
+                  <div class="catalog-item-hover" tabindex="0">
                     <a class="button" href="#">В корзину</a>
                     <a class="catalog-item-compare" href="#">Добавить к сравнению</a>
                   </div>
@@ -245,7 +257,7 @@
               <li><a href="#">Гарантия</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
-            <p>Тел.: +7 (495) 495-95-95</p>
+            <p>Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
           </div>
           <div class="third-line-wrapper">
             <div class="yellow-line"></div>

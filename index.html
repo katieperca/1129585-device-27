@@ -23,9 +23,9 @@
 						<img src="img/logo-device.svg" width="163" height="35" alt="Логотип интернет-магазина «Девайс»">
 					</a>
 					<div class="search-user-navigation-wrapper">
-						<form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-							<label class="visually-hidden" for="search">Поиск по сайту</label>
-							<input type="search" id="search" placeholder="Поиск по сайту">
+						<form class="search-form" action="https://echo.htmlacademy.ru/" method="get" name="search-form">
+							<label class="visually-hidden-normal" for="search">Поиск по сайту</label>
+							<input type="search" id="search" placeholder="Поиск по сайту" name="search">
 							<button class="search-button" type="submit">Найти</button>
 						</form>
 						<ul class="user-navigation header-user-navigation">
@@ -249,16 +249,16 @@
 					<h2 class="visually-hidden">Партнеры</h2>
 					<ul class="partners-list">
 						<li class="partners-item">
-							<a class="partners-item-logo" href="#"><img src="img/logo-1-dji.jpg" width="260" height="100" alt="Логотип DJI"></a>
+							<a class="partners-item-logo" href="#"><img src="img/logo-1-dji-hover.jpg" width="260" height="100" alt="Логотип DJI"></a>
 						</li>
 						<li class="partners-item">
-							<a class="partners-item-logo" href="#"><img src="img/logo-2-sp-gates.jpg" width="260" height="100" alt="Логотип SP Gadgets"></a>
+							<a class="partners-item-logo" href="#"><img src="img/logo-2-sp-gates-hover.jpg" width="260" height="100" alt="Логотип SP Gadgets"></a>
 						</li>
 						<li class="partners-item">
-							<a class="partners-item-logo" href="#"><img src="img/logo-3-gopro.jpg" width="260" height="100" alt="Логотип GoPro"></a>
+							<a class="partners-item-logo" href="#"><img src="img/logo-3-gopro-hover.jpg" width="260" height="100" alt="Логотип GoPro"></a>
 						</li>
 						<li class="partners-item">
-							<a class="partners-item-logo" href="#"><img src="img/logo-4-vive.jpg" width="260" height="100" alt="Логотип Vive"></a>
+							<a class="partners-item-logo" href="#"><img src="img/logo-4-vive-hover.jpg" width="260" height="100" alt="Логотип Vive"></a>
 						</li>
 					</ul>
 				</section>
@@ -291,7 +291,7 @@
 							проверить работоспособность покупки. Всякое бывает.
 						</p>
 						<a href="#">
-							<img src="img/map.jpg" width="560" height="222" alt="Миниатюра карты">
+							<p><img src="img/map.jpg" width="560" height="222" alt="Миниатюра карты"></p>
 						</a>
 						<a class="button" href="#">Напишите нам</a>
 					</section>
@@ -319,7 +319,7 @@
 							<li><a href="#">Гарантия</a></li>
 							<li><a href="#">Контакты</a></li>
 						</ul>
-						<p>Тел.: +7 (495) 495-95-95</p>
+						<p>Тел.: <a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
 					</div>
 					<div class="third-line-wrapper">
 						<div class="yellow-line"></div>
@@ -387,5 +387,6 @@
 				<span class="visually-hidden">Закрыть</span>
 			</button>
 		</section>
+		<script src="script.js"></script>
 	</body>
 </html>
