@@ -1,3 +1,43 @@
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 @font-face {
   font-family: "Gilroy";
   src:  local("Gilroy"),
@@ -82,36 +122,41 @@ input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
 
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
 
   white-space: nowrap;
 
+  border: 0;
+
   clip-path: inset(100%);
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
+
 } 
 
 .visually-hidden-normal {
   position: absolute;
 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
-
-  opacity: 0;
 
   white-space: nowrap;
 
+  opacity: 0;
+  border: 0;
+
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+
 }
 
 .visually-hidden-input {
@@ -121,6 +166,7 @@ input[type="radio"].visually-hidden {
 /* кнопки */
 .button {
   position: relative;
+  z-index: 2;
 
   display: inline-block;
   width: 220px;
@@ -136,19 +182,17 @@ input[type="radio"].visually-hidden {
   text-align: center;
   vertical-align: middle;
   letter-spacing: 3.6px;
+  cursor: pointer;
 
   background-color: transparent;
   border: none;
-
-  cursor: pointer;
-
-  z-index: 2;
 }
 
 .button::before{
   content: "";
 
   position: absolute;
+  z-index: -1;
   top: 16px;
   left: 0;
 
@@ -156,8 +200,6 @@ input[type="radio"].visually-hidden {
   height: 8px;
 
   background-color: #f0c52e;
-
-  z-index: -1;
 
   transition-duration: 0.5s;
 }
@@ -168,17 +210,17 @@ input[type="radio"].visually-hidden {
 
 .button:hover::before,
 .button:focus::before {
-  transform: scaleY(5);
-
   cursor: pointer;
+
+  transform: scaleY(5);
 }
 
 .button:active {
+  cursor: pointer;
+
   color: rgba(0, 0, 0, 0.3);
   background-image: none;
   background-color: #f0c52e;
-
-  cursor: pointer;
 }
 
 /*хедер*/
@@ -365,6 +407,7 @@ input[type="radio"].visually-hidden {
 .site-navigation-dropdown {
   padding: 0;
   margin: 0;
+
   list-style: none;
 }
 
@@ -393,6 +436,7 @@ input[type="radio"].visually-hidden {
 .header-user-navigation .compare-link,
 .header-user-navigation .cart-link {
   position: relative;
+
   padding-left: 30px;
 }
 
@@ -501,7 +545,6 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/plus.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-
   opacity: 0.3;
 }
 
@@ -525,13 +568,13 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation-dropdown-wrapper {
+  z-index: 60;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; 
   padding-top: 25px;
   width: 551px;
-
-  z-index: 60;
 }
 
  .site-navigation-dropdown-item {
@@ -765,13 +808,12 @@ input[type="radio"].visually-hidden {
   margin-right: 20px;
 
   vertical-align: top;
+  cursor: pointer;
+  user-select: none;
 
   background-image: url("../img/slider-button-empty.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-
-  cursor: pointer;
-  user-select: none;
 }
 
 #product-1:checked ~ .main-wrapper #slide1,
@@ -798,7 +840,6 @@ input[type="radio"].visually-hidden {
 
 .popular-list {
   display: flex;
-  /* align-items: flex-start; */
   padding: 0;
   margin: 0;
 
@@ -915,13 +956,13 @@ input[type="radio"].visually-hidden {
 .services {
   position: relative;
 
+  overflow: hidden;
+
   width: 100%;
   min-height: 386px;
   padding: 0;
   margin: 0;
   margin-top: 82px;
-
-  overflow: hidden;
 }
 
 .services::before {
@@ -1207,6 +1248,7 @@ input[type="radio"].visually-hidden {
 
   width: 8px;
   height: 8px;
+
   border: 2px solid #e5e5e5;
   border-radius: 50%;
 }
@@ -1402,9 +1444,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: flex-end;
   padding: 15px 0;
-  /* padding-top: 5px; */
   margin-left: auto;
-
 }
 
 .sortlist-buttons a {
@@ -1423,7 +1463,6 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/icon-up-dir.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-
   opacity: 0.2;
 }
 
@@ -1557,6 +1596,7 @@ input[type="radio"].visually-hidden {
   background-color: #ababab;
   box-shadow: 0 2px 1px 0 #cfcfcf;
   border-radius: 50%;
+
   cursor: pointer;
 }
 
@@ -1743,6 +1783,7 @@ input[type="radio"].visually-hidden {
 
   width: 60px;
   height: 60px;
+
   border-radius: 50%;
   border: solid 2px #000000;
   opacity: 0.1;
@@ -1864,6 +1905,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   list-style: none;
+
   background-color: #ebebeb;
 }
 
@@ -1929,8 +1971,8 @@ input[type="radio"].visually-hidden {
 /*Футер*/
 .main-footer {
   padding: 65px 0;
-
   width: 100%;
+
   background-color: #464646;
 }
 
@@ -1950,6 +1992,7 @@ input[type="radio"].visually-hidden {
 .social-list {
   padding: 0;
   margin: 0;
+  
   list-style: none;
 }
 
@@ -2100,7 +2143,6 @@ input[type="radio"].visually-hidden {
 .footer-site-navigation {
   display: flex;
   padding: 0;
-  /* width: 425px; */
 }
 
 .footer-site-navigation li:nth-child(1),
@@ -2162,28 +2204,35 @@ input[type="radio"].visually-hidden {
   top: 15%;
   left: 50%;
 
+  display: none; 
   margin-left: -480px;
   
   box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
 } 
 
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
 .modal-feedback {
-  display: none; 
+  z-index: 80;
+
   padding: 95px 100px 80px 100px;
   width: 960px;
   height: 553px;
   background-color: #ffffff;
-
-  z-index: 80;
 }
 
-.feedback-wrapper {
+.feedback-field-wrapper {
   display: flex;
   justify-content: space-between;
   width: 760px;
-}
-
-.feedback-wrapper {
   margin-bottom: 35px;
 }
 
@@ -2254,30 +2303,45 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-map {
-  display: none;
+  z-index: 80;
+
   width: 960px;
   height: 559px;
   background-color: #ffffff;
+}
 
-  z-index: 80;
+.modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
 }
 
 .modal-close {
   position: absolute;
-
   top: 22px;
   right: 22px; 
+  z-index: 3;
 
   width: 55px;
   height: 55px;
   
+  font-size: 0;
+
   background-image: url("../img/modal-close.svg");
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 0 0;
-
   border: none;
-
   opacity: 0.5;
 } 
 
