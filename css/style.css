@@ -840,6 +840,7 @@ input[type="radio"].visually-hidden {
 
 .popular-list {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 
@@ -852,7 +853,7 @@ input[type="radio"].visually-hidden {
   margin-right: 40px;
 }
 
-.popular-item:last-child {
+.popular-item:nth-child(6n) {
   margin-right: 0;
 }
 
@@ -933,7 +934,7 @@ input[type="radio"].visually-hidden {
   background-position: 55px 32px; 
 }
 
-.popular-item:last-child a::after {
+.popular-item:nth-child(6) a::after {
   background-image: url("../img/popular-6.svg");
   background-position: 13px 49px; 
 }
@@ -950,7 +951,6 @@ input[type="radio"].visually-hidden {
 .popular-item a:active::after {
   opacity: 0.3;
 }
-
 
 /*Сервисы*/
 .services {
@@ -1135,6 +1135,7 @@ input[type="radio"].visually-hidden {
 
 .partners-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
   margin: 0;
@@ -1175,7 +1176,6 @@ input[type="radio"].visually-hidden {
 .partners-item:nth-child(4) a:hover::before {
   background-image: url("../img/logo-4-vive.jpg");
 }
-
 
 /*О нас*/
 .index-columns {
@@ -1728,14 +1728,23 @@ input[type="radio"].visually-hidden {
 
 .filter-input:disabled + label {
   color: #a6a6a6;
+
+  cursor: default;
 }
 
-.filter-input:hover + label,
-.filter-input:focus + label {
+.filter-input:disabled + label::before,
+.filter-input:checked:disabled + label::before {
+  opacity: 0.25;
+  
+  cursor: default;
+}
+
+.filter-input:enabled + label:hover::before,
+.filter-input:enabled + label:focus::before {
   opacity: 0.6;
 }
 
-.filter-input:active + label {
+.filter-input:enabled:active + label::before {
   opacity: 1;
 }
 
